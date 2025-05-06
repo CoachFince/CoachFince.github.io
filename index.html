@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthyLife Coach - Turunkan Berat Badan dengan Ahli</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --primary: #0082A6;
+      --secondary: #F7F5ED;
+      --accent1: #C4DEE3;
+      --accent2: #8689C7;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--secondary);
+      margin: 0;
+      padding-top: 70px;
+    }
+
+    /* Banner dengan overlay gelap */
+    .hero-section {
+      background: url('asset/sport-concept-with-equipment-frame.jpg') center/cover no-repeat;
+      position: relative;
+      padding: 100px 0;
+      color: white;
+    }
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    .hero-section .container {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-section h1,
+    .hero-section p {
+      color: #fff;
+    }
+
+/* sembunyikan semua item */
+#testimonialCarousel .carousel-item {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+/* tampilkan hanya item active */
+#testimonialCarousel .carousel-item.active {
+  display: flex !important;
+}
+
+/* atur ukuran gambar */
+#testimonialCarousel .carousel-item img {
+  width: auto;
+  max-width: 300px;
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Menjadi seperti ini: */
+.coach-photo {
+  width: 250px;               /* diperbesar */
+  height: 250px;              /* diperbesar */
+  object-fit: cover;
+  border: 5px solid var(--accent2);
+  border-radius: 20px;        /* rounded square */
+}
+
+    /* Tombol WA */
+    .btn-wa {
+      background-color: #25D366;
+      color: #fff !important;
+      padding: 12px 30px;
+      transition: all 0.3s;
+    }
+    .btn-wa:hover {
+      background-color: #128C7E;
+      transform: translateY(-2px);
+    }
+
+    /* Social icons */
+    .social-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      color: #fff;
+    }
+    .instagram { background: #E1306C; }
+    .tiktok    { background: #000; }
+    .facebook  { background: #3b5998; }
+    .social-btn:hover { transform: scale(1.1); }
+
+    /* Custom carousel arrows */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: var(--primary);
+      padding: 12px;
+      border-radius: 50%;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: var(--secondary);
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">Coach Fince</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#testimoni">Testimoni</a></li>
+          <li class="nav-item"><a class="nav-link" href="#coach">Coach</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="display-4 fw-bold">Transformasi Tubuhmu dalam 10 Hari!</h1>
+          <p class="lead">Program diet personal dengan coach professional</p>
+          <a href="https://wa.me/qr/KRT5GIAKFXWFC1" class="btn btn-wa">Konsultasi Gratis</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni -->
+  <section id="testimoni" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Kisah Sukses Klien</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="asset/testimoni 1.jpeg" alt="Testimoni 1">
+          </div>
+          <div class="carousel-item">
+            <img src="asset/testimoni 2.jpeg" alt="Testimoni 2">
+          </div>
+          <div class="carousel-item">
+            <img src="asset/testimoni 3.jpeg" alt="Testimoni 3">
+          </div>
+          <div class="carousel-item">
+            <img src="asset/testimoni 4.jpeg" alt="Testimoni 4">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profil Coach -->
+  <section id="coach" class="py-5 bg-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+          <img src="asset/coach.jpeg" alt="Coach Fince" class="coach-photo">
+        </div>
+        <div class="col-md-8">
+          <h2>Fince Rahel Bambangan, A.Md.Kep</h2>
+          <p class="lead">Coach Nutrisi & Manajemen Berat Badan</p>
+          <p>Spesialisasi dalam manajemen berat badan dan nutrisi olahraga</p>
+          <div class="d-flex gap-3">
+            <a href="https://wa.me/qr/KRT5GIAKFXWFC1" class="btn btn-wa">Hubungi via WhatsApp</a>
+            <div class="d-flex gap-2">
+              <a href="https://www.tiktok.com/@coachdietrahel82" class="social-btn tiktok"><i class="bi bi-tiktok"></i></a>
+              <a href="https://www.facebook.com/share/12JxUZo4CmV/" class="social-btn facebook"><i class="bi bi-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="py-5">
+    <div class="container text-center">
+      <h2>Hubungi Saya</h2>
+      <p>Siap memulai perjalanan transformasi? Jangan ragu untuk menghubungi saya.</p>
+      <a href="https://wa.me/qr/KRT5GIAKFXWFC1" class="btn btn-wa">Konsultasi di WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>&copy; 2025 Coach Fince. All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -22,6 +22,27 @@
       padding-top: 70px;
     }
 
+/* default untuk desktop/tablet */
+/* .hero-section {
+  background-image: url('asset/sport-concept-with-equipment-frame.jpg');
+  background-size: cover;
+  background-position: center center;
+  padding: 100px 0;
+  min-height: 60vh;
+} */
+
+/* khusus mobile (maksimal 576px) */
+@media (max-width: 576px) {
+  .hero-section {
+    background-image: url('asset/sport-concept-with-equipment-frame.jpg'); /* bisa gambar crop khusus mobile */
+    background-size: cover;            /* tetap cover */
+    background-position: top center;   /* atur fokus gambar ke atas */
+    padding: 60px 0;                   /* kurangi tinggi padding */
+    min-height: 40vh;                  /* atur tinggi relatif layar */
+  }
+}
+
+
     /* Banner dengan overlay gelap */
     .hero-section {
       background: url('asset/sport-concept-with-equipment-frame.jpg') center/cover no-repeat;
